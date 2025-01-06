@@ -1,77 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-03T19:42:47 IST" name="Default suite" finished-at="2025-01-03T19:42:56 IST" duration-ms="9370">
+  <suite started-at="2025-01-06T14:17:10 IST" name="Default suite" finished-at="2025-01-06T14:17:19 IST" duration-ms="8883">
     <groups>
     </groups>
-    <test started-at="2025-01-03T19:42:47 IST" name="Default test" finished-at="2025-01-03T19:42:56 IST" duration-ms="9370">
-      <class name="Auto1.HandlingGUIElements">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:47 IST" name="setUp" finished-at="2025-01-03T19:42:54 IST" duration-ms="7152" status="PASS">
+    <test started-at="2025-01-06T14:17:10 IST" name="Default test" finished-at="2025-01-06T14:17:19 IST" duration-ms="8883">
+      <class name="Auto1.HandlingUploadFiles">
+        <test-method is-config="true" signature="setUpUpload()[pri:0, instance:Auto1.HandlingUploadFiles@4218d6a3]" started-at="2025-01-06T14:17:10 IST" name="setUpUpload" finished-at="2025-01-06T14:17:19 IST" duration-ms="8417" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="inputNameHandling()[pri:1, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:54 IST" name="inputNameHandling" finished-at="2025-01-03T19:42:54 IST" duration-ms="194" status="PASS">
+        </test-method> <!-- setUpUpload -->
+        <test-method signature="getTitleOfFiles()[pri:1, instance:Auto1.HandlingUploadFiles@4218d6a3]" started-at="2025-01-06T14:17:19 IST" name="getTitleOfFiles" finished-at="2025-01-06T14:17:19 IST" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- inputNameHandling -->
-        <test-method signature="inputEmailHandling()[pri:2, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:54 IST" name="inputEmailHandling" finished-at="2025-01-03T19:42:54 IST" duration-ms="163" status="PASS">
+        </test-method> <!-- getTitleOfFiles -->
+        <test-method signature="inputHandles()[pri:2, instance:Auto1.HandlingUploadFiles@4218d6a3]" started-at="2025-01-06T14:17:19 IST" name="inputHandles" finished-at="2025-01-06T14:17:19 IST" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- inputEmailHandling -->
-        <test-method signature="inputPhoneHandling()[pri:3, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:54 IST" name="inputPhoneHandling" finished-at="2025-01-03T19:42:55 IST" duration-ms="118" status="PASS">
+        </test-method> <!-- inputHandles -->
+        <test-method signature="buttonsHandles()[pri:3, instance:Auto1.HandlingUploadFiles@4218d6a3]" started-at="2025-01-06T14:17:19 IST" name="buttonsHandles" finished-at="2025-01-06T14:17:19 IST" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- inputPhoneHandling -->
-        <test-method signature="inputTextHandling()[pri:4, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:55 IST" name="inputTextHandling" finished-at="2025-01-03T19:42:55 IST" duration-ms="150" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- inputTextHandling -->
-        <test-method signature="checkBoxMale()[pri:5, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:55 IST" name="checkBoxMale" finished-at="2025-01-03T19:42:55 IST" duration-ms="82" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkBoxMale -->
-        <test-method signature="days()[pri:6, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:55 IST" name="days" finished-at="2025-01-03T19:42:55 IST" duration-ms="168" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- days -->
-        <test-method signature="boxSelected()[pri:7, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:55 IST" name="boxSelected" finished-at="2025-01-03T19:42:55 IST" duration-ms="184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- boxSelected -->
-        <test-method signature="countrySelected()[pri:8, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:55 IST" name="countrySelected" finished-at="2025-01-03T19:42:55 IST" duration-ms="88" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- countrySelected -->
-        <test-method signature="colorSelected()[pri:9, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:55 IST" name="colorSelected" finished-at="2025-01-03T19:42:55 IST" duration-ms="146" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- colorSelected -->
-        <test-method signature="sortedList()[pri:10, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:55 IST" name="sortedList" finished-at="2025-01-03T19:42:55 IST" duration-ms="63" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sortedList -->
-        <test-method signature="datePicker()[pri:11, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:55 IST" name="datePicker" finished-at="2025-01-03T19:42:56 IST" duration-ms="175" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- datePicker -->
-        <test-method signature="datePicker2()[pri:12, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:56 IST" name="datePicker2" finished-at="2025-01-03T19:42:56 IST" duration-ms="143" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- datePicker2 -->
-        <test-method signature="datePicker3()[pri:13, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:56 IST" name="datePicker3" finished-at="2025-01-03T19:42:56 IST" duration-ms="67" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- datePicker3 -->
-        <test-method signature="subscribeToLink()[pri:14, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:56 IST" name="subscribeToLink" finished-at="2025-01-03T19:42:56 IST" duration-ms="224" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- subscribeToLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Auto1.HandlingGUIElements@78691363]" started-at="2025-01-03T19:42:56 IST" name="tearDown" finished-at="2025-01-03T19:42:56 IST" duration-ms="161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Auto1.HandlingGUIElements -->
+        </test-method> <!-- buttonsHandles -->
+      </class> <!-- Auto1.HandlingUploadFiles -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
