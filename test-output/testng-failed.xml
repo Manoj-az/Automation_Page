@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Auto1.HandlingUploadFiles">
+      <class name="Auto1.HandlingDynamicWebTables">
         <methods>
-          <include name="inputHandles"/>
+          <include name="getTableData"/>
+          <include name="tearDown"/>
           <include name="setUpUpload"/>
         </methods>
-      </class> <!-- Auto1.HandlingUploadFiles -->
+      </class> <!-- Auto1.HandlingDynamicWebTables -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

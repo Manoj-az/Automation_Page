@@ -1,15 +1,21 @@
 package Auto1;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class HandlingGUIElements {
@@ -30,7 +36,7 @@ public class HandlingGUIElements {
 		 */
 	}
 	@Test(priority=1)
-	public void inputNameHandling()
+	public void inputNameHandling() throws IOException
 	{
 		WebElement title=driver.findElement(By.xpath("//h1[@class='title']"));
 		System.out.println(title.getText());
@@ -39,11 +45,24 @@ public class HandlingGUIElements {
 		{
 			name.sendKeys("ABCD");
 			System.out.println("Name Entered");
+			try 
+			   {
+				TakesScreenshot ss=(TakesScreenshot)driver;
+				File source=ss.getScreenshotAs(OutputType.FILE);
+				File target=new File("E:/AutomationPraticePage/Screenshots/NameInputBox.png");
+				FileUtils.copyFile(source,target);
+				System.out.println("Screenshot saved in folder :"+target);
+			   }
+			catch (Exception e) 
+			   {
+				System.out.println("An error occurred: " + e.getMessage());
+			   }
 		}
 		else
 		{
 			System.out.println("Unable to enter name");
 		}
+		
 	
 	}
 	@Test(priority=2)
@@ -54,6 +73,18 @@ public class HandlingGUIElements {
 		{
 			email.sendKeys("abcde@gmail.com");
 			System.out.println("Email Entered");
+			try 
+			   {
+				TakesScreenshot ss=(TakesScreenshot)driver;
+				File source=ss.getScreenshotAs(OutputType.FILE);
+				File target=new File("E:/AutomationPraticePage/Screenshots/MailInputBox.png");
+				FileUtils.copyFile(source,target);
+				System.out.println("Screenshot saved in folder :"+target);
+			   }
+			catch (Exception e) 
+			   {
+				System.out.println("An error occurred: " + e.getMessage());
+			   }
 		}
 		else
 		{
@@ -70,6 +101,18 @@ public class HandlingGUIElements {
 		{
 			phone.sendKeys("9999999999");
 			System.out.println("phone Entered");
+			try 
+			   {
+				TakesScreenshot ss=(TakesScreenshot)driver;
+				File source=ss.getScreenshotAs(OutputType.FILE);
+				File target=new File("E:/AutomationPraticePage/Screenshots/NumberInputBox.png");
+				FileUtils.copyFile(source,target);
+				System.out.println("Screenshot saved in folder :"+target);
+			   }
+			catch (Exception e) 
+			   {
+				System.out.println("An error occurred: " + e.getMessage());
+			   }
 		}
 		else
 		{
@@ -85,6 +128,18 @@ public class HandlingGUIElements {
 		{
 			textArea.sendKeys("Automation Test Pratice");
 			System.out.println("Text Entered");
+			try 
+			   {
+				TakesScreenshot ss=(TakesScreenshot)driver;
+				File source=ss.getScreenshotAs(OutputType.FILE);
+				File target=new File("E:/AutomationPraticePage/Screenshots/AddressBox.png");
+				FileUtils.copyFile(source,target);
+				System.out.println("Screenshot saved in folder :"+target);
+			   }
+			catch (Exception e) 
+			   {
+				System.out.println("An error occurred: " + e.getMessage());
+			   }
 		}
 		else
 		{
@@ -102,6 +157,18 @@ public class HandlingGUIElements {
 		{
 			male.click();
 			System.out.println("Clicked");
+			try 
+			   {
+				TakesScreenshot ss=(TakesScreenshot)driver;
+				File source=ss.getScreenshotAs(OutputType.FILE);
+				File target=new File("E:/AutomationPraticePage/Screenshots/GenderRadioButton.png");
+				FileUtils.copyFile(source,target);
+				System.out.println("Screenshot saved in folder :"+target);
+			   }
+			catch (Exception e) 
+			   {
+				System.out.println("An error occurred: " + e.getMessage());
+			   }
 		}
 		else
 		{
@@ -129,6 +196,18 @@ public class HandlingGUIElements {
 	    	{
 	    		WebElement day=days.get(i);
 	    		day.click();
+	    		try 
+				   {
+					TakesScreenshot ss=(TakesScreenshot)driver;
+					File source=ss.getScreenshotAs(OutputType.FILE);
+					File target=new File("E:/AutomationPraticePage/Screenshots/DaysSelected.png");
+					FileUtils.copyFile(source,target);
+					System.out.println("Screenshot saved in folder :"+target);
+				   }
+				catch (Exception e) 
+				   {
+					System.out.println("An error occurred: " + e.getMessage());
+				   }
 	    	}
 	    }
     }
@@ -139,6 +218,18 @@ public class HandlingGUIElements {
 		WebElement country=driver.findElement(By.id("country"));
 		Select cntry=new Select(country);
 		cntry.selectByValue("germany");
+		try 
+		   {
+			TakesScreenshot ss=(TakesScreenshot)driver;
+			File source=ss.getScreenshotAs(OutputType.FILE);
+			File target=new File("E:/AutomationPraticePage/Screenshots/CountrySelected.png");
+			FileUtils.copyFile(source,target);
+			System.out.println("Screenshot saved in folder :"+target);
+		   }
+		catch (Exception e) 
+		   {
+			System.out.println("An error occurred: " + e.getMessage());
+		   }
 	}
 
 	@Test(priority=9)
@@ -147,6 +238,18 @@ public class HandlingGUIElements {
 		WebElement colors=driver.findElement(By.id("colors"));
 		Select color=new Select(colors);
 		color.selectByValue("white");
+		try 
+		   {
+			TakesScreenshot ss=(TakesScreenshot)driver;
+			File source=ss.getScreenshotAs(OutputType.FILE);
+			File target=new File("E:/AutomationPraticePage/Screenshots/ColorSelected.png");
+			FileUtils.copyFile(source,target);
+			System.out.println("Screenshot saved in folder :"+target);
+		   }
+		catch (Exception e) 
+		   {
+			System.out.println("An error occurred: " + e.getMessage());
+		   }
 	}
 	
 	@Test(priority=10)
@@ -155,6 +258,18 @@ public class HandlingGUIElements {
 		WebElement sortedList=driver.findElement(By.id("animals"));
 		Select animals=new Select(sortedList);
 		animals.selectByVisibleText("Lion");
+		try 
+		   {
+			TakesScreenshot ss=(TakesScreenshot)driver;
+			File source=ss.getScreenshotAs(OutputType.FILE);
+			File target=new File("E:/AutomationPraticePage/Screenshots/Animals.png");
+			FileUtils.copyFile(source,target);
+			System.out.println("Screenshot saved in folder :"+target);
+		   }
+		catch (Exception e) 
+		   {
+			System.out.println("An error occurred: " + e.getMessage());
+		   }
 	}
 
 	
@@ -165,6 +280,18 @@ public class HandlingGUIElements {
 		date.click();
 		WebElement selectDate=driver.findElement(By.xpath("//a[@data-date='6']"));
 		selectDate.click();
+		try 
+		   {
+			TakesScreenshot ss=(TakesScreenshot)driver;
+			File source=ss.getScreenshotAs(OutputType.FILE);
+			File target=new File("E:/AutomationPraticePage/Screenshots/DatePicker1.png");
+			FileUtils.copyFile(source,target);
+			System.out.println("Screenshot saved in folder :"+target);
+		   }
+		catch (Exception e) 
+		   {
+			System.out.println("An error occurred: " + e.getMessage());
+		   }
 	}
 	
 	
@@ -175,6 +302,18 @@ public class HandlingGUIElements {
 		date.click();
 		WebElement selectDate=driver.findElement(By.xpath("//a[@data-date='6']"));
 		selectDate.click();
+		try 
+		   {
+			TakesScreenshot ss=(TakesScreenshot)driver;
+			File source=ss.getScreenshotAs(OutputType.FILE);
+			File target=new File("E:/AutomationPraticePage/Screenshots/DatePicker2.png");
+			FileUtils.copyFile(source,target);
+			System.out.println("Screenshot saved in folder :"+target);
+		   }
+		catch (Exception e) 
+		   {
+			System.out.println("An error occurred: " + e.getMessage());
+		   }
 	}
 	
 	
@@ -183,6 +322,18 @@ public class HandlingGUIElements {
 	{
 		WebElement date=driver.findElement(By.xpath("//input[@id='start-date']"));
 		date.click();
+		try 
+		   {
+			TakesScreenshot ss=(TakesScreenshot)driver;
+			File source=ss.getScreenshotAs(OutputType.FILE);
+			File target=new File("E:/AutomationPraticePage/Screenshots/DatePicker3.png");
+			FileUtils.copyFile(source,target);
+			System.out.println("Screenshot saved in folder :"+target);
+		   }
+		catch (Exception e) 
+		   {
+			System.out.println("An error occurred: " + e.getMessage());
+		   }
 	}
 
 	
@@ -220,7 +371,7 @@ public class HandlingGUIElements {
 	}
 	
 	
-	public static void main(String args[])
+	public static void main(String args[]) throws IOException
 	
 	{
 		HandlingGUIElements hge=new HandlingGUIElements();
