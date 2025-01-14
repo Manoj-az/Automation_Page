@@ -3,6 +3,7 @@ package Auto1;
 import java.util.Scanner;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import BaseClass.Base;
@@ -47,9 +48,39 @@ public class HandlingDynamicWebTables extends Base
   		 {
   		    System.out.println("Browser Not Found");
   		 }
-	     
+	      
 	}   
 	     
+	 @Test(priority=3)
+     public void getDetailsOfDisplayValues()
+     {
+		 WebElement chromeCPU=driver.findElement(By.xpath("//strong[@class='chrome-cpu']"));
+    	 System.out.println("CPU load of Chrome process: "+chromeCPU.getText());
+    	 
+    	 WebElement firefoxMemory=driver.findElement(By.xpath("//strong[@class='firefox-memory']"));
+    	 System.out.println("Memory Size of Firefox process: "+firefoxMemory.getText());
+    	 
+    	 WebElement chromeNetwork=driver.findElement(By.xpath("//strong[@class='chrome-network']"));
+    	 System.out.println("Network speed of Chrome process: "+chromeNetwork.getText());
+    	 
+    	 WebElement firefoxSpace=driver.findElement(By.xpath("//strong[@class='firefox-disk']"));
+    	 System.out.println("Disk space of Firefox process:  "+firefoxSpace.getText());
+    	 
+    	 
+     }
+	 
+	 public static void main(String[] args)
+		{
+			
+			
+			HandlingDynamicWebTables dt=new HandlingDynamicWebTables();
+			dt.getTitle();
+			HandlingDynamicWebTables.getTableData();
+			dt.getDetailsOfDisplayValues();
+			
+		}
+
+	}
 	     
 	     
 	     
@@ -187,14 +218,4 @@ public class HandlingDynamicWebTables extends Base
 	
 	
 	
-	public static void main(String[] args)
-	{
-		
-		
-		HandlingDynamicWebTables dt=new HandlingDynamicWebTables();
-		dt.getTitle();
-		HandlingDynamicWebTables.getTableData();
-		
-	}
-
-}
+	
