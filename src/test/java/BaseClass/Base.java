@@ -21,9 +21,10 @@ public class Base
 		}
 		
 		@AfterClass
-		public void tearDown()
-		{
-			driver.close();
+		public void tearDown() {
+		    if (driver != null) {
+		        driver.quit();
+		    }
 		}
 	
 		public static void main(String args[]) throws Exception
