@@ -11,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -35,9 +36,39 @@ public class HandlingUploadFiles {
 		System.out.println(title.getText());
     }
 	
-	
-	
 	@Test(priority=2)
+	public void handleButtonWithoutUploadFile()
+	{
+		WebElement btn1=driver.findElement(By.xpath("//button[normalize-space()='Upload Single File']"));
+		if(btn1.isEnabled())
+		{
+			btn1.click();
+			WebElement statusOfButton1=driver.findElement(By.id("singleFileStatus"));
+			System.out.println(statusOfButton1.getText());
+			String statusOfSingleButton=statusOfButton1.getText();
+			if(statusOfSingleButton.equals("No file selected."))
+			{
+				System.out.println("please upload a file");
+			}
+		}
+		
+		
+		WebElement btn2=driver.findElement(By.xpath("//button[normalize-space()='Upload Multiple Files']"));
+		if(btn2.isEnabled())
+		{
+			btn2.click();
+			WebElement statusOfButton2=driver.findElement(By.id("multipleFilesStatus"));
+			System.out.println(statusOfButton2.getText());
+			String statusOfMultipleButtons=statusOfButton2.getText();
+			if(statusOfMultipleButtons.equals("No files selected."))
+			{
+				System.out.println("please upload a Multiple files");
+			}
+		}
+	}
+	
+	
+	@Test(priority=3)
 	public void inputHandles()
 	{
 		WebElement inputbox1=driver.findElement(By.xpath("//input[@id='singleFileInput']"));
@@ -64,17 +95,13 @@ public class HandlingUploadFiles {
 		else
 		{
 			System.out.println("Files are not Uploaded "+inputbox2);
-
 		}
 	}
 	
-	
-	
-	@Test(priority=3)
+	@Test(priority=4)
 	public void buttonsHandles()
 	{
 		WebElement btn1=driver.findElement(By.xpath("//button[normalize-space()='Upload Single File']"));
-	
 		if(btn1.isEnabled())
 		{
 		btn1.click();
@@ -98,7 +125,6 @@ public class HandlingUploadFiles {
 		{
 		System.out.println("Button not Clicked "+btn1.getText());
 		}
-		
 		WebElement btn2=driver.findElement(By.xpath("//button[normalize-space()='Upload Multiple Files']"));
 		if(btn2.isEnabled())
 		{
@@ -126,6 +152,12 @@ public class HandlingUploadFiles {
 		}
 	}
 	
+	@AfterClass
+	public void tearDown() {
+	    if (driver != null) {
+	        driver.quit();
+	    }
+	}
 	
 	
 	public static void main(String arg[])

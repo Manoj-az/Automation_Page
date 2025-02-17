@@ -59,7 +59,6 @@ public class HandlingAlerts extends Base {
 	public void promptAlert() throws InterruptedException
 	{
 		WebElement prompt=driver.findElement(By.id("promptBtn"));
-		
 		try {
 		if(prompt.isEnabled())
 		{
@@ -76,8 +75,6 @@ public class HandlingAlerts extends Base {
 		{
 			System.out.println(e.getMessage());
 		}
-		
-		
 		try {
 		if(prompt.isEnabled())
 		{
@@ -93,27 +90,6 @@ public class HandlingAlerts extends Base {
 		catch(Exception e)
 		{
 			System.out.println(e.getMessage());
-		}
-		
-	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		}	
+	}	
 }

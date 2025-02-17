@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" parallel="classes" thread-count="3">
+   <!-- <test name="Parallel Tests1">
+        <classes>
+            <class name="Auto1.HandlingGUIElements"/>
+            <class name="Auto1.HandlingWebTables"/>
+            <class name="Auto1.HandlingUploadFiles"/>
+            <class name="Auto1.HandleFormSection2"/>
+        </classes>
+    </test>-->
+    <test name="Parallel Tests2">
+        <classes>
+            <class name="Auto1.HandlingTabsandDynamicButton"/>
+            <class name="Auto1.HandlingSmallActionElements"/>
+            <class name="Auto1.HandlingNewTabandPopup"/>
+            <class name="Auto1.HandlingDynamicWebTables"/>
+            <class name="Auto1.HandlingAlerts"/>
+            <class name="Auto1.HandleShawdowDOM"/>
+            <class name="Auto1.HandlePageWebTable"/>
+            <class name="Auto1.HandleLabelsLinksandVisitors"/>
+            <class name="Auto1.HandleFormSection"/>
+            <class name="Auto1.FooterLinks"/>
+        </classes>
+    </test>
+</suite>

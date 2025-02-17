@@ -271,9 +271,7 @@ public class HandlingGUIElements {
 			System.out.println("An error occurred: " + e.getMessage());
 		   }
 	}
-
-	
-	@Test(priority=11)
+    @Test(priority=11)
 	public void datePicker()
 	{
 		WebElement date=driver.findElement(By.xpath("//input[@id='datepicker']"));
@@ -316,7 +314,6 @@ public class HandlingGUIElements {
 		   }
 	}
 	
-	
 	@Test(priority=13)
 	public void datePicker3()
 	{
@@ -354,6 +351,7 @@ public class HandlingGUIElements {
 		    	driver.switchTo().window(handles);
 			    driver.close();
 			    driver.switchTo().window(windowHandle);
+			    System.out.println("In windowHandled");
 		    }
 		    else
 		    {

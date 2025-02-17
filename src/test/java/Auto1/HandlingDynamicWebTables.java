@@ -25,7 +25,8 @@ public class HandlingDynamicWebTables extends Base
 	     int columns=driver.findElements(By.xpath("//table[@id='taskTable']//th")).size();
 	     System.out.println(columns);
 	     
-	     Scanner sc=new Scanner(System.in);
+	     @SuppressWarnings("resource")
+		Scanner sc=new Scanner(System.in);
 	     System.out.println("Enter browser name: ");
 	     String browser=sc.nextLine();
 	     

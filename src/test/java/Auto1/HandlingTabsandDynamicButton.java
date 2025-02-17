@@ -111,7 +111,6 @@ public class HandlingTabsandDynamicButton extends Base
 			{
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("arguments[0].scrollIntoView(true);",btnStart);
-			//TakesScreenshot ts=(TakesScreenshot)driver;
 			File source=btnStart.getScreenshotAs(OutputType.FILE);
 			File target=new File("E:/AutomationPraticePage/Screenshots/DynamicButton1.png");
 			FileUtils.copyFile(source, target);

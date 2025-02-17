@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Auto1.HandlingNewTabandPopup">
+      <class name="Auto1.FooterLinks">
         <methods>
           <include name="tearDown"/>
-          <include name="popUp"/>
+          <include name="handleHiddenandAjaxElements"/>
           <include name="setUpUpload"/>
         </methods>
-      </class> <!-- Auto1.HandlingNewTabandPopup -->
+      </class> <!-- Auto1.FooterLinks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
