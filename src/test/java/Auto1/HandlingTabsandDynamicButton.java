@@ -41,8 +41,7 @@ public class HandlingTabsandDynamicButton extends Base
 			}
 		}
 	
-	
-	
+	// Getting search tag child Elements and their titles.
 	@Test(priority = 1)
     public void accessToSearchResults() 
 	{
@@ -71,17 +70,15 @@ public class HandlingTabsandDynamicButton extends Base
         }     
 	}
 	
-	
+	//For Handling More Element
 	@Test(priority=2)
-	public void handlingMore()
+	public void handlingMore() throws InterruptedException
 	{
 		String parentWindow=driver.getWindowHandle();
 		System.out.println(parentWindow);
 		
-		
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		WebElement more=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='Wikipedia1_wikipedia-search-more']//a")));
-		//WebElement more=driver.findElement(By.xpath("//div[@id='Wikipedia1_wikipedia-search-more']//a"));
 		more.click();
 		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 		Set<String> allWindows=driver.getWindowHandles();
@@ -91,6 +88,7 @@ public class HandlingTabsandDynamicButton extends Base
 			if(!moreHandle.equals(parentWindow))
 			{
 				driver.switchTo().window(moreHandle);
+				Thread.sleep(2000);
 				System.out.println("more Window Title: "+driver.getTitle());
 				driver.close();
 			}
@@ -99,7 +97,7 @@ public class HandlingTabsandDynamicButton extends Base
 		
 	}
 	
-	
+	// For Handling Dynamic Button
 	@Test(priority=3)
 	public void handleDynamicBtn()
 	{
@@ -150,16 +148,4 @@ public class HandlingTabsandDynamicButton extends Base
 		}
 	
 	}
-	
-	
-
-	public static void main(String args[])
-	{
-		HandlingTabsandDynamicButton td= new HandlingTabsandDynamicButton();
-		td.handleTab();
-		td.accessToSearchResults();
-		td.handlingMore();
-		td.handleDynamicBtn();
-	}
-
 }

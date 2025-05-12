@@ -26,15 +26,6 @@ public class Base
 		        driver.quit();
 		    }
 		}
-	
-		public static void main(String args[]) throws Exception
-		{
-			Base bc=new Base();
-			bc.setUpUpload();
-			bc.tearDown();
-			
-		}
-
-	}
+}
 
 

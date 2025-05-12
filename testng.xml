@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AllTestsSuite" parallel="tests" thread-count="2">
+  <test name="FooterLinksTest">
+    <classes>
+      <class name="tests.FooterLinksTest"/>
+    </classes>
+  </test>
+  <test name="AlertsTest">
+    <classes>
+      <class name="tests.AlertsTest"/>
+    </classes>
+  </test>
+  <test name="FileUploadTest">
+    <classes>
+      <class name="tests.FileUploadTest"/>
+    </classes>
+  </test>
+  <test name="HandleFormTest">
+    <classes>
+      <class name="tests.HandleFormTest"/>
+    </classes>
+  </test>
+  <test name="HandleFormTest2">
+    <classes>
+      <class name="tests.HandleFormTest2"/>
+    </classes>
+  </test>
+  <test name="HandleLablesLinksandVisitorsTest">
+    <classes>
+      <class name="tests.HandleLablesLinksandVisitorsTest"/>
+    </classes>
+  </test>
+  <test name="HandlePageWebTableTest">
+    <classes>
+      <class name="tests.HandlePageWebTableTest"/>
+    </classes>
+  </test>
+  <test name="HandleShadowDOMTest">
+    <classes>
+      <class name="tests.HandleShadowDOMTest"/>
+    </classes>
+  </test>
+  <test name="HandlingDynamicWebTablesTest">
+    <classes>
+      <class name="tests.HandlingDynamicWebTablesTest"/>
+    </classes>
+  </test>
+  <test name="HandlingGUIElementsTest">
+    <classes>
+      <class name="tests.HandlingGUIElementsTest"/>
+    </classes>
+  </test>
+  <test name="HandlingNewTabandPopupTest">
+    <classes>
+      <class name="tests.HandlingNewTabandPopupTest"/>
+    </classes>
+  </test>
+  <test name="HandlingSmallActionElementsTest">
+    <classes>
+      <class name="tests.HandlingSmallActionElementsTest"/>
+    </classes>
+  </test>
+  <test name="HandlingTabsandButtonsTest">
+    <classes>
+      <class name="tests.HandlingTabsandButtonsTest"/>
+    </classes>
+  </test>
+  <test name="HandlingWebTablesTest">
+    <classes>
+      <class name="tests.HandlingWebTablesTest"/>
+    </classes>
+  </test>
+</suite>
